@@ -15,8 +15,10 @@ Default values if you leave fields empty:
 3. um_ads_free_cookie, ads_free_cookie_value
 4. Example: um_prospect: 30
 
-## Reference
+## Reference Ezoic plugin
 https://support.ezoic.com/kb/article/how-can-i-disable-ads-on-a-page  Section: Alternative Rule Types - To Exclude by Cookie
+
+Values from 3. to be used in the Ezoic plugin settings.
 ## Installation
 Install by downloading the ZIP file and install as a new Plugin, which you upload in WordPress -> Plugins -> Add New -> Upload Plugin.
 Activate the plugin.
