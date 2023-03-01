@@ -9,7 +9,7 @@ UM Settings -> Access -> Other
 3. Cookie Name and Value - Comma separated
 4. Role IDs and Number of Days - One Role per line and RoleID and number of days colon separated.
 
-Default values:
+Default values if you leave fields empty:
 1. ads_free_start_time
 2. unchecked
 3. um_ads_free_cookie, ads_free_cookie_value
