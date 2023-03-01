@@ -16,7 +16,9 @@ Default values if you leave fields empty:
 4. Example: um_prospect: 30
 
 ## Reference Ezoic plugin
-https://support.ezoic.com/kb/article/how-can-i-disable-ads-on-a-page  Section: Alternative Rule Types - To Exclude by Cookie
+https://support.ezoic.com/kb/article/how-can-i-disable-ads-on-a-page  
+
+Section: Alternative Rule Types - To Exclude by Cookie
 
 Cookie Name and Value from 3. to be used in the Ezoic plugin settings.
 ## Installation
