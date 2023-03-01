@@ -10,9 +10,11 @@ UM Settings -> Access -> Other
 4. Role IDs and Number of Days - One Role per line and RoleID and number of days colon separated.
 
 Default values:
-1. 'ads_free_start_time'
+1. ads_free_start_time
 2. unchecked
-3. 'um_ads_free_cookie', 'ads_free_cookie_value'
+3. um_ads_free_cookie, ads_free_cookie_value
+4. Example: um_prospect: 30
+
 ## Reference
 https://support.ezoic.com/kb/article/how-can-i-disable-ads-on-a-page  Section: Alternative Rule Types - To Exclude by Cookie
 ## Installation
