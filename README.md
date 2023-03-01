@@ -18,7 +18,7 @@ Default values if you leave fields empty:
 ## Reference Ezoic plugin
 https://support.ezoic.com/kb/article/how-can-i-disable-ads-on-a-page  Section: Alternative Rule Types - To Exclude by Cookie
 
-Values from 3. to be used in the Ezoic plugin settings.
+Cookie Name and Value from 3. to be used in the Ezoic plugin settings.
 ## Installation
 Install by downloading the ZIP file and install as a new Plugin, which you upload in WordPress -> Plugins -> Add New -> Upload Plugin.
 Activate the plugin.
