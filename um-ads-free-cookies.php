@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Ultimate Member - Ads Free Cookies
  * Description:     Extension to Ultimate Member for creating ads free cookies supporting the Ezoic plugin.
- * Version:         1.0.0 development
+ * Version:         1.1.0
  * Requires PHP:    7.4
  * Author:          Miss Veronica
  * License:         GPL v2 or later
@@ -10,7 +10,7 @@
  * Author URI:      https://github.com/MissVeronica
  * Text Domain:     ultimate-member
  * Domain Path:     /languages
- * UM version:      2.5.0
+ * UM version:      2.8.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -46,7 +46,7 @@ class UM_Ads_Free_Cookies {
             foreach( $roles_text as $text ) {
                 $role_days = array_map( 'trim', explode( ':', $text ));
 
-                if( is_array( $role_days ) && count( $role_days ) == 2 ) {
+                if ( is_array( $role_days ) && count( $role_days ) == 2 ) {
                     $ads_free_roles[$role_days[0]] = $role_days[1];
                 }
             }
@@ -95,36 +95,39 @@ class UM_Ads_Free_Cookies {
 
     public function um_settings_structure_ads_free_cookies( $settings_structure ) {
 
-        $settings_structure['access']['sections']['other']['fields'][] = array(
-            'id'            => 'um_ads_free_cookies_key',
-            'type'          => 'text',
-            'size'          => 'small',
-            'label'         => __( 'Ads Free Cookies - Meta Key Start time', 'ultimate-member' ),
-            'tooltip'       => __( 'Name of the meta key with start time for ads free.', 'ultimate-member' )
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['title'] = __( 'Ads Free Cookies', 'ultimate-member' );
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['description'] = __( 'Plugin version 1.2.0 - tested with UM 2.8.3', 'ultimate-member' );
+
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['fields'][] = array(
+                'id'            => 'um_ads_free_cookies_key',
+                'type'          => 'text',
+                'size'          => 'small',
+                'label'         => __( 'Meta Key Start time', 'ultimate-member' ),
+                'description'   => __( 'Name of the meta key with start time for ads free for each user.', 'ultimate-member' )
             );
 
-        $settings_structure['access']['sections']['other']['fields'][] = array(
-            'id'            => 'um_ads_free_cookies_start',
-            'type'          => 'checkbox',
-            'label'         => __( 'Ads Free Cookies - Start time usage', 'ultimate-member' ),
-            'tooltip'       => __( 'Click checkbox for start time for ads free from next page display by the user if meta_key empty. 
-                                    Unchecked you must give the starttime as a Unix timestamp.', 'ultimate-member' )
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['fields'][] = array(
+                'id'            => 'um_ads_free_cookies_start',
+                'type'          => 'checkbox',
+                'label'         => __( 'Start time usage', 'ultimate-member' ),
+                'description'   => __( 'Click checkbox for start time for ads free from next page display by the user if meta_key empty.
+                                        Unchecked you must give the starttime as a Unix timestamp.', 'ultimate-member' )
             );
 
-        $settings_structure['access']['sections']['other']['fields'][] = array(
-            'id'            => 'um_ads_free_cookies_name',
-            'type'          => 'text',
-            'size'          => 'small',
-            'label'         => __( 'Ads Free Cookies - Cookie Name and Value', 'ultimate-member' ),
-            'tooltip'       => __( 'Comma separated', 'ultimate-member' )
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['fields'][] = array(
+                'id'            => 'um_ads_free_cookies_name',
+                'type'          => 'text',
+                'size'          => 'small',
+                'label'         => __( 'Cookie Name and Value', 'ultimate-member' ),
+                'description'   => __( 'Comma separated', 'ultimate-member' )
             );
 
-        $settings_structure['access']['sections']['other']['fields'][] = array(
-            'id'            => 'um_ads_free_cookies_roles',
-            'type'          => 'textarea',
-            'size'          => 'small',
-            'label'         => __( 'Ads Free Cookies - Role IDs and Number of Days', 'ultimate-member' ),
-            'tooltip'       => __( 'One Role per line and RoleID and number of days colon separated.', 'ultimate-member' )
+        $settings_structure['access']['sections']['other']['form_sections']['ads_free_cookies']['fields'][] = array(
+                'id'            => 'um_ads_free_cookies_roles',
+                'type'          => 'textarea',
+                'size'          => 'small',
+                'label'         => __( 'Role IDs and Number of Days', 'ultimate-member' ),
+                'description'   => __( 'One Role per line and RoleID and number of days colon separated.', 'ultimate-member' )
             );
 
         return $settings_structure;
@@ -133,3 +136,4 @@ class UM_Ads_Free_Cookies {
 }
 
 new UM_Ads_Free_Cookies();
+
