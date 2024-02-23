@@ -23,7 +23,7 @@ Section: Alternative Rule Types - To Exclude by Cookie
 Cookie Name and Value from 3. to be used in the Ezoic plugin settings.
 
 ## Updates
-1. Version 1.1.0 Tested with UM 2.8.3
+1. Version 1.1.0 Updated for UM 2.8.3
 
 ## Installation
 Install by downloading the ZIP file and install as a new Plugin, which you upload in WordPress -> Plugins -> Add New -> Upload Plugin.
